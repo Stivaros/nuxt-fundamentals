@@ -13,6 +13,15 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Homepage',
+      meta: [
+          { name: 'twitter:title', content: 'Nuxt fundamentals course home page' },
+          { name: 'twitter:description', content: 'The deployed environment for my Nuxt fundamentals course' }
+        ]
+    }
+  },
   computed: {
     posts() {
       return this.$store.state.posts.all

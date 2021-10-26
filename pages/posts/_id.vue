@@ -1,5 +1,4 @@
 
-IntelliJ IDEAPhpStormWebStorm
 <template>
   <div class="container">
     <article>
@@ -21,6 +20,15 @@ IntelliJ IDEAPhpStormWebStorm
 
 <script>
   export default {
+    head() {
+      return {
+        title: this.post.title,
+        meta: [
+          { name: 'twitter:title', content: this.post.title },
+          { name: 'twitter:description', content: this.post.content }
+        ]
+      }
+    },
     data() {
       return {
         id: this.$route.params.id
